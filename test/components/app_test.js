@@ -1,8 +1,17 @@
 import {renderComponent, expect} from '../test_helper';
 import App from '../../src/components/app';
 
-describe('Test the App Component')
+describe('This App Component', () => {
+    let component;
 
-it('shows the correct text');
+    beforeEach(() => {
+        component = renderComponent(App);
+    });
 
-expect
+
+    it('shows a comment box', () => {
+        expect(component.find('.comment-box')).to.exist;
+    });
+
+});
+
